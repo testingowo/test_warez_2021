@@ -1,13 +1,17 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.MainPage;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class testWarez {
 
@@ -32,5 +36,12 @@ public class testWarez {
     @Test
     public void testSomething() {
         System.out.println("Test something");
+        driver.get("https://www.testwarez.pl/");
+        System.out.println(driver.getCurrentUrl());
+        List<WebElement> list = driver.findElements(By.tagName("div"));
+
+        for (WebElement el : list) {
+            System.out.println(el.getText());
+        }
     }
 }
