@@ -38,6 +38,7 @@ public class testWarez {
 //        desiredCapabilities.setPlatform(Platform.LINUX);
 //        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
 //        driver.manage().window().maximize();
+//        driver.get("https://www.testwarez.pl/");
 //        mainPage = new MainPage(driver);
         //OLD
         WebDriverManager.chromedriver().ignoreVersions("95", "93");
@@ -66,10 +67,13 @@ public class testWarez {
         lecturesPage = mainPage.clickOnLecturesOption();
 
         assertEquals(driver.getCurrentUrl(), "https://www.testwarez.pl/agenda-wyklady");
+
+        lecturesPage.clickOnDockerAgendaElement();
+        assertEquals(driver.getCurrentUrl(), "https://www.testwarez.pl/event/uruchamianie-testow-w-selenium-grid-przy-pomocy-dockera");
     }
 
     @AfterEach
     public void tearDown() {
-//        driver.quit();
+        driver.quit();
     }
 }
