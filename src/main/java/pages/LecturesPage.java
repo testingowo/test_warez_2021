@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LecturesPage extends BasePage {
 
-    @FindBy(css = "href = 'http://www.testwarez.pl/event/uruchamianie-testow-w-selenium-grid-przy-pomocy-dockera")
+    @FindBy(css = "[href = 'http://www.testwarez.pl/event/uruchamianie-testow-w-selenium-grid-przy-pomocy-dockera']")
     WebElement dockerAgendaElement;
 
     public LecturesPage(WebDriver driver) {
