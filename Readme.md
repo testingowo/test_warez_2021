@@ -22,4 +22,5 @@ Execute tests on docker:
 Docker compose
 ######################################################################################
 
-Run: docker compose -f docker-compose.yml up -d
+1. Start the infrastructure: docker compose -f docker-compose.yml up -d
+2. Stop the infrastructure docker-compose -f docker-compose.yml down
