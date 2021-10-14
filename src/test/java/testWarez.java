@@ -26,7 +26,6 @@ public class testWarez {
     protected MainPage mainPage;
     protected LecturesPage lecturesPage;
     protected DesiredCapabilities desiredCapabilities = null;
-//    protected ChromeOptions desiredCapabilities = null;
 
     @BeforeEach
     public void navigateToMainPage() throws MalformedURLException {
