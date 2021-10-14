@@ -17,3 +17,9 @@ Execute tests on docker:
 9. run firefox node: docker run -d -v /dev/shm:/dev/shm --privileged --link selenium-hub:hub selenium/node-firefox
 10. run the chrome debug: docker run -d --link selenium-hub:hub selenium/node-chrome-debug
 11. run the firefox debug: docker run -d --link selenium-hub:hub selenium/node-firefox-debug
+
+######################################################################################
+Docker compose
+######################################################################################
+
+Run: docker compose -f docker-compose.yml up -d
